@@ -39,7 +39,7 @@ export default async function (req, res) {
       model: "gpt-3.5-turbo",
       messages: messagesArray(animal),
     });
-    console.log(completion.data.choices[0].message.content);
+    // console.log(completion.data.choices[0].message.content);
     res
       .status(200)
       .json({ result: completion.data.choices[0].message.content });
